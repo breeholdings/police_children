@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Police Children School Ntinda</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+  integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root {
+      --primary-color: #002147;
+      --secondary-color: #ffffff;
+      --light-blue: #f4f8fc;
+      --card-bg: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--primary-color);
+      background-color: var(--secondary-color);
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      padding: 20px 0;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 60px;
+      width: 60px;
+      margin-right: 10px;
+    }
+
+    .logo h1 {
+      font-size: 1.4rem;
+    }
+
+    nav a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: url('hero.jpg') center/cover no-repeat;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%; width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .hero h2 {
+      position: relative;
+      font-size: 2.8rem;
+      background-color: rgba(0,0,0,0.6);
+      padding: 20px 30px;
+      border-radius: 10px;
+    }
+
+    .section {
+      padding: 70px 20px;
+      background-color: var(--light-blue);
+    }
+
+    .section:nth-of-type(even) {
+      background-color: var(--secondary-color);
+    }
+
+    .section-content {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--primary-color);
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+      color: #003366;
+    }
+
+    .card p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    /* ABOUT SECTION SIDE BY SIDE */
+    .about-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .about-text h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .about-text p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .about-video iframe {
+      width: 100%;
+      height: 250px;
+      border-radius: 10px;
+      border: none;
+    }
+
+    .link-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: var(--primary-color);
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .link-btn:hover {
+      background-color: #00172f;
+    }
+
+    /* ACADEMICS + ADMISSIONS */
+    .two-columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    /* NEWS ROW */
+    .news-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      padding: 10px 10px 20px;
+    }
+
+    .footer-container {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .footer-column {
+      flex: 1 1 250px;
+      margin: 10px;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 15px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-column ul li a {
+      color: var(--secondary-color);
+      text-decoration: none;
+    }
+
+    .footer-column ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .social-icons a {
+      font-size: 1.3rem;
+      margin-right: 15px;
+      color: var(--secondary-color);
+      text-decoration: none;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9rem;
+      border-top: 1px solid #ccc;
+      padding-top: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .header-container,
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero h2 {
+        font-size: 1.6rem;
+      }
+
+      .about-row {
+        grid-template-columns: 1fr;
+      }
+
+      .about-video iframe {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="garden.jpg" alt="School Logo" />
+      </div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="about.html">About</a>
+        <a href="academics.html">Academics</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="news.html">News</a>
+        <a href="management.html">Management</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <div class="hero">
+  </div>
+
+  <!-- ABOUT US -->
+  <section class="section">
+    <div class="section-content">
+      <h2>About Us</h2>
+      <div class="about-row">
+        <div class="about-text">
+          <h3>Who We Are</h3>
+          <p>
+            Police Children School Ntinda was founded by the Uganda Police Force to provide affordable, values-based education to children of police officers and the wider community.
+            We emphasize discipline, academic excellence, and holistic growth.
+          </p>
+          <a href="about.html" class="link-btn">Learn more about us →</a>
+        </div>
+        <div class="about-video">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="School Video" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACADEMICS & ADMISSIONS -->
+  <section class="section">
+    <div class="section-content">
+      <h2>Academics & Admissions</h2>
+      <div class="two-columns">
+        <div class="card">
+          <h3>Academics</h3>
+          <p>
+            We offer the full national curriculum from Nursery to Primary 7, including languages, sciences, mathematics, and computer studies — enriched with music, sports, and more.
+          </p>
+          <a href="academics.html" class="link-btn">Explore Academics →</a>
+        </div>
+        <div class="card">
+          <h3>Admissions</h3>
+          <p>
+            Enroll now! Our admissions office is open during working hours. All learners are welcome. Visit us or call to inquire about school fees and application requirements.
+          </p>
+          <a href="admissions.html" class="link-btn">How to Apply →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS & INSIGHTS -->
+  <section class="section">
+    <div class="section-content">
+      <h2>News & Insights</h2>
+      <div class="news-row">
+        <div class="card">
+          <h3>Term 2 Begins</h3>
+          <p>We welcome all pupils back for Term 2. Academic activities resume on Monday, 8th July. Be punctual!</p>
+        </div>
+        <div class="card">
+          <h3>New Computer Lab Opened</h3>
+          <p>Our new computer lab with 30+ machines is now operational for all upper primary pupils.</p>
+        </div>
+        <div class="card">
+          <h3>Sports Day Incoming</h3>
+          <p>Join us for our Sports Day on 25th July. Pupils will compete in track & field events. Parents are invited!</p>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 25px;">
+        <a href="news.html" class="link-btn">View all news & insights →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="staff.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="news.html">News</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>Contact Info</h4>
+        <p><i class="fas fa-school"></i> Police Children School Ntinda</p>
+        <p><i class="fas fa-map-marker-alt"></i> Ntinda Barracks, Kampala</p>
+        <p><i class="fas fa-phone"></i> +256 700 000000</p>
+        <p><i class="fas fa-envelope"></i> info@policechildrenschool.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Police Children School Ntinda. All rights reserved. | Built and maintained by Breeford Technologies
+    </div>
+  </footer>
+
+</body>
+</html>
